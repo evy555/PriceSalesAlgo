@@ -1,7 +1,5 @@
 import pandas as pd
 
-list_of_stocks = ['asdfasfas','ijr','ijh', 'fcom', 'ive', 'ewj', 'ieur', 'fsta']
-
 
 def Get_Statistics_Fidelity(ETFs):
     ps_list = dict()  
