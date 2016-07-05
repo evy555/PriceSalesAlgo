@@ -22,5 +22,4 @@ def getpe(stocks):
 list = getpe(list_of_stocks) 
 df = pd.DataFrame(list) 
 print(df)  
-print('sike')
 
