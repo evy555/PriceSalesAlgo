@@ -29,11 +29,10 @@ def Get_Statistics_Fidelity(ETFs):
                 ps_list['Dividend'].extend(inputdividend)
                 ps_list['ExpenseRatio'].extend(inputexpense)  
         except:
-            print(str(ticker) + ': an error occured with this ticker symbol') 
-    print(ps_list)          
+            print(str(ticker) + ': an error occured with this ticker symbol')        
     Table = pd.DataFrame(ps_list) 
     return(Table)
         
          
-print(Get_Statistics_Fidelity(list_of_stocks))
+print(Get_Statistics_Fidelity(list_of_stocks).head())
 
