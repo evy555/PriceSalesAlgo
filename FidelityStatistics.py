@@ -30,7 +30,5 @@ def Get_Statistics_Fidelity(ETFs):
             print(str(ticker) + ': an error occured with this ticker symbol')        
     Table = pd.DataFrame(ps_list) 
     return(Table)
-        
-         
-print(Get_Statistics_Fidelity(list_of_stocks).head())
+
 
