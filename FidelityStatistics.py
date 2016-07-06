@@ -20,14 +20,23 @@ def Get_Statistics_Fidelity(ETFs):
                 inputps = key_statistics[3][1][8:9].tolist() 
                 inputpe = key_statistics[3][1][6:7].tolist() 
                 inputdividend = key_statistics[3][1][11:12].tolist() 
+                if len(inputdividend) < 1:
+                    inputdividend = ['0%']
                 inputexpense = key_statistics[3][1][12:13].tolist() 
+                if len(inputexpense) < 1:
+                    inputexpense = ['0%']  
                 ps_list['Ticker'].append(valid_ticker) 
                 ps_list['PriceSales'].extend(inputps) 
                 ps_list['PriceEarnings'].extend(inputpe)
                 ps_list['Dividend'].extend(inputdividend)
                 ps_list['ExpenseRatio'].extend(inputexpense)  
         except:
-            print(str(ticker) + ': an error occured with this ticker symbol')        
+            print(str(ticker) + ': an error occured with this ticker symbol')     
+    print(len(ps_list['Ticker']))
+    print(len(ps_list['PriceSales']))
+    print(len(ps_list['PriceEarnings']))
+    print(len(ps_list['Dividend']))
+    print(len(ps_list['ExpenseRatio'])) 
     Table = pd.DataFrame(ps_list) 
     return(Table)
 
